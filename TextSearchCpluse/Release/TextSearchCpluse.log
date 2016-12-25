@@ -1,0 +1,15 @@
+﻿Build started 12/25/2016 3:03:41 AM.
+     1>Project "D:\Text-Search-master\TextSearchCpluse\TextSearchCpluse.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Text-Search-master\Release\TextSearchCpluse.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Text-Search-master\Release\TextSearchCpluse.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Text-Search-master\Release\TextSearchCpluse.lib" /MACHINE:X86 /SAFESEH /DLL Release\dllmain.obj
+         Release\stdafx.obj
+         Release\TextSearchCpluse.obj
+            Creating library D:\Text-Search-master\Release\TextSearchCpluse.lib and object D:\Text-Search-master\Release\TextSearchCpluse.exp
+         Generating code
+         Finished generating code
+         TextSearchCpluse.vcxproj -> D:\Text-Search-master\Release\TextSearchCpluse.dll
+     1>Done Building Project "D:\Text-Search-master\TextSearchCpluse\TextSearchCpluse.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.06
