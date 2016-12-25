@@ -38,10 +38,11 @@
             this.parallelGPURadioButton = new System.Windows.Forms.RadioButton();
             this.resultsListBox = new System.Windows.Forms.ListBox();
             this.numOfThreadsNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.completionLabel = new System.Windows.Forms.Label();
+            this.n_resultsLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.loadFileButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numOfThreadsNumericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -50,18 +51,18 @@
             // searchQueryTextBox
             // 
             this.searchQueryTextBox.Font = new System.Drawing.Font("Tahoma", 12.5F);
-            this.searchQueryTextBox.Location = new System.Drawing.Point(526, 98);
+            this.searchQueryTextBox.Location = new System.Drawing.Point(508, 117);
             this.searchQueryTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.searchQueryTextBox.Multiline = true;
             this.searchQueryTextBox.Name = "searchQueryTextBox";
-            this.searchQueryTextBox.Size = new System.Drawing.Size(732, 271);
+            this.searchQueryTextBox.Size = new System.Drawing.Size(642, 271);
             this.searchQueryTextBox.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12.5F);
-            this.label1.Location = new System.Drawing.Point(518, 52);
+            this.label1.Location = new System.Drawing.Point(501, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 41);
@@ -110,10 +111,10 @@
             // searchButton
             // 
             this.searchButton.Font = new System.Drawing.Font("Tahoma", 12.5F);
-            this.searchButton.Location = new System.Drawing.Point(28, 391);
+            this.searchButton.Location = new System.Drawing.Point(28, 400);
             this.searchButton.Margin = new System.Windows.Forms.Padding(6);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(434, 77);
+            this.searchButton.Size = new System.Drawing.Size(418, 77);
             this.searchButton.TabIndex = 7;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -129,7 +130,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(434, 252);
+            this.groupBox1.Size = new System.Drawing.Size(416, 271);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search Mode";
@@ -152,7 +153,7 @@
             this.resultsListBox.Font = new System.Drawing.Font("Tahoma", 12.5F);
             this.resultsListBox.FormattingEnabled = true;
             this.resultsListBox.ItemHeight = 40;
-            this.resultsListBox.Location = new System.Drawing.Point(31, 134);
+            this.resultsListBox.Location = new System.Drawing.Point(836, 60);
             this.resultsListBox.Margin = new System.Windows.Forms.Padding(6);
             this.resultsListBox.Name = "resultsListBox";
             this.resultsListBox.Size = new System.Drawing.Size(252, 364);
@@ -164,7 +165,7 @@
             this.numOfThreadsNumericUpDown.Location = new System.Drawing.Point(340, 52);
             this.numOfThreadsNumericUpDown.Margin = new System.Windows.Forms.Padding(6);
             this.numOfThreadsNumericUpDown.Name = "numOfThreadsNumericUpDown";
-            this.numOfThreadsNumericUpDown.Size = new System.Drawing.Size(126, 48);
+            this.numOfThreadsNumericUpDown.Size = new System.Drawing.Size(106, 48);
             this.numOfThreadsNumericUpDown.TabIndex = 10;
             this.numOfThreadsNumericUpDown.Value = new decimal(new int[] {
             4,
@@ -172,60 +173,78 @@
             0,
             0});
             // 
-            // label2
+            // completionLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12.5F);
-            this.label2.Location = new System.Drawing.Point(24, 46);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(302, 41);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Search Completed!";
+            this.completionLabel.AutoSize = true;
+            this.completionLabel.Font = new System.Drawing.Font("Tahoma", 12.5F);
+            this.completionLabel.Location = new System.Drawing.Point(12, 413);
+            this.completionLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.completionLabel.Name = "completionLabel";
+            this.completionLabel.Size = new System.Drawing.Size(302, 41);
+            this.completionLabel.TabIndex = 11;
+            this.completionLabel.Text = "Search Completed!";
+            this.completionLabel.Visible = false;
             // 
-            // label4
+            // n_resultsLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12.5F);
-            this.label4.Location = new System.Drawing.Point(24, 87);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(732, 41);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "14 results were found at the following locations";
+            this.n_resultsLabel.AutoSize = true;
+            this.n_resultsLabel.Font = new System.Drawing.Font("Tahoma", 12.5F);
+            this.n_resultsLabel.Location = new System.Drawing.Point(12, 60);
+            this.n_resultsLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.n_resultsLabel.Name = "n_resultsLabel";
+            this.n_resultsLabel.Size = new System.Drawing.Size(732, 41);
+            this.n_resultsLabel.TabIndex = 12;
+            this.n_resultsLabel.Text = "14 results were found at the following locations";
+            this.n_resultsLabel.Visible = false;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.timeLabel);
             this.groupBox2.Controls.Add(this.resultsListBox);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.n_resultsLabel);
+            this.groupBox2.Controls.Add(this.completionLabel);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 12.5F);
-            this.groupBox2.Location = new System.Drawing.Point(28, 480);
+            this.groupBox2.Location = new System.Drawing.Point(31, 514);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox2.Size = new System.Drawing.Size(1230, 544);
+            this.groupBox2.Size = new System.Drawing.Size(1122, 482);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search Results";
             // 
-            // label5
+            // timeLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 12.5F);
-            this.label5.Location = new System.Drawing.Point(322, 46);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(604, 41);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Search Duration was 1.03254 seconds.";
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Font = new System.Drawing.Font("Tahoma", 12.5F);
+            this.timeLabel.Location = new System.Drawing.Point(12, 119);
+            this.timeLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(604, 41);
+            this.timeLabel.TabIndex = 13;
+            this.timeLabel.Text = "Search Duration was 1.03254 seconds.";
+            this.timeLabel.Visible = false;
+            // 
+            // loadFileButton
+            // 
+            this.loadFileButton.AutoSize = true;
+            this.loadFileButton.Font = new System.Drawing.Font("Tahoma", 12.5F);
+            this.loadFileButton.Location = new System.Drawing.Point(916, 400);
+            this.loadFileButton.Margin = new System.Windows.Forms.Padding(6);
+            this.loadFileButton.Name = "loadFileButton";
+            this.loadFileButton.Size = new System.Drawing.Size(234, 77);
+            this.loadFileButton.TabIndex = 14;
+            this.loadFileButton.Text = "Load File";
+            this.loadFileButton.UseVisualStyleBackColor = true;
+            this.loadFileButton.Click += new System.EventHandler(this.loadFileButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 1039);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1190, 1039);
+            this.Controls.Add(this.loadFileButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.numOfThreadsNumericUpDown);
             this.Controls.Add(this.groupBox1);
@@ -235,7 +254,7 @@
             this.Controls.Add(this.searchQueryTextBox);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Text Search";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numOfThreadsNumericUpDown)).EndInit();
@@ -257,11 +276,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox resultsListBox;
         private System.Windows.Forms.NumericUpDown numOfThreadsNumericUpDown;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label completionLabel;
+        private System.Windows.Forms.Label n_resultsLabel;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.RadioButton parallelGPURadioButton;
+        private System.Windows.Forms.Button loadFileButton;
     }
 }
 
