@@ -1,0 +1,8 @@
+C:\Users\nadaa\Desktop\Projects\Text Search\bin\Release\HPCProject.exe.config
+C:\Users\nadaa\Desktop\Projects\Text Search\bin\Release\HPCProject.exe
+C:\Users\nadaa\Desktop\Projects\Text Search\bin\Release\HPCProject.pdb
+C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.Form1.resources
+C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.Properties.Resources.resources
+C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.csproj.GenerateResource.Cache
+C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.exe
+C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.pdb
