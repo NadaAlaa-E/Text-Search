@@ -24,7 +24,6 @@ C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.exe
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.pdb
 C:\Users\nadaa\Desktop\Projects\Text Search\bin\Debug\HPCProject.exe
 C:\Users\nadaa\Desktop\Projects\Text Search\bin\Debug\HPCProject.pdb
-C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.csprojResolveAssemblyReference.cache
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.Form1.resources
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.Properties.Resources.resources
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.csproj.GenerateResource.Cache

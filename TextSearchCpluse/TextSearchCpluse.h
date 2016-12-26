@@ -3,10 +3,12 @@
 #include <vector>
 #include <iostream>
 #include <omp.h>
+#include <amp.h>
 
 using namespace std;
+using namespace concurrency;
 
-enum mode{ Parallel, Serial };
+enum mode{ ParallelCPU, Serial, ParallelGPU };
 class TextSearch
 {
 private:
@@ -14,8 +16,9 @@ private:
 	double timeElapsed;
 	int n_threads;
 	vector <int> positions;
-	void ParallelSearch(string);
+	void ParallelSearchCPU(string);
 	void SequentialSearch(string);
+	void ParallelSearchGPU(string);
 
 public:
 	TextSearch(string, int);

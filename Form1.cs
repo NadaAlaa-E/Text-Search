@@ -29,6 +29,7 @@ namespace HPCProject
         private void searchButton_Click(object sender, EventArgs e)
         {
             n_resultsLabel.Visible = timeLabel.Visible = completionLabel.Visible = false;
+            groupBox2.Update();
 
             if (!IsDataComplete())
             {
@@ -78,7 +79,7 @@ namespace HPCProject
 
         private void parallelRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            searchMode = mode.Parallel;
+            searchMode = mode.ParallelCPU;
         }
 
         private void sequentialRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -105,7 +106,7 @@ namespace HPCProject
             }
         }
     }
-    public enum mode { Parallel, Serial, ParallelGPU };
+    public enum mode { ParallelCPU, Serial, ParallelGPU };
     public class Wrap
     {
         [DllImport(@"C:\Users\nadaa\Desktop\Projects\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
