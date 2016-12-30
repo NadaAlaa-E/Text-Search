@@ -12,16 +12,16 @@ TextSearch::TextSearch(){}
 
 TextSearch::~TextSearch(){}
 
-TextSearch::TextSearch(string paragraph)
+TextSearch::TextSearch(string paragraph, int n_threads)
 {
 	this->paragraph = paragraph;
+	this->n_threads = n_threads;
 }
 
 vector <int> TextSearch::GetPositions()
 {
 	return this->positions;
 }
-
 void TextSearch::SearchforWord(string keyword, mode searchMode)
 {
 	double timeEnd, timeBegin;
@@ -52,6 +52,8 @@ void TextSearch::ParallelSearchCPU(string keyword)
 	int paragraphSize = paragraph.size();
 	int keywordSize = keyword.size();
 
+	omp_set_num_threads(n_threads);
+
 #pragma omp parallel for shared(keyword) private(found)
 	for (int i = 0; i <= paragraphSize - keywordSize; i++)
 	{
@@ -67,10 +69,11 @@ void TextSearch::ParallelSearchCPU(string keyword)
 		{
 #pragma omp critical
 			{
-				positions.push_back(i*1000);
+				positions.push_back(i);
 			}
 		}
 	}
+	//positions.push_back(omp_get_num_threads());
 }
 
 void TextSearch::SequentialSearch(string keyword)
@@ -119,27 +122,26 @@ void TextSearch::ParallelSearchGPU(string keyword)
 		if (found) positions_gpu[idx] = 1;
 	});
 
-	/*for (int i = 0; i <= paragraphSize - keywordSize; i++) {
+	for (int i = 0; i <= paragraphSize - keywordSize; i++) {
 		if (positions_gpu(i) == 1) positions.push_back(i);
-	}*/
-	positions_gpu.synchronize();
+	}
 
 	delete[] paragraphInt;
 	delete[] keywordInt;
 	delete[] positionsInt;
 	/*parallel_for(0, paragraphSize - keywordSize + 1, [&keyword, &paragraph, &pos, keywordSize](int i)
 	{
-		bool found = true;
-		for (int j = 0; j < keywordSize; j++)
-		{
-			if (keyword[j] != paragraph[j + i])
-			{
-				found = false;
-				break;
-			}
-		}
-		if (found)
-			pos.push_back(i);
+	bool found = true;
+	for (int j = 0; j < keywordSize; j++)
+	{
+	if (keyword[j] != paragraph[j + i])
+	{
+	found = false;
+	break;
+	}
+	}
+	if (found)
+	pos.push_back(i);
 	});
 	positions = pos;*/
 }
@@ -149,15 +151,16 @@ double TextSearch::GetElapsedTime()
 	return timeElapsed;
 }
 
+
 extern "C"
 {/*
-	__declspec(dllexport) TextSearch* Create_TextSearch_Obj()
+ __declspec(dllexport) TextSearch* Create_TextSearch_Obj()
+ {
+ return new TextSearch();
+ }*/
+	__declspec(dllexport) TextSearch* Create_TextSearch_Obj(const char* paragraph_, const int n_threads_)
 	{
-	return new TextSearch();
-	}*/
-	__declspec(dllexport) TextSearch* Create_TextSearch_Obj(const char* paragraph_)
-	{
-		return new TextSearch(paragraph_);
+		return new TextSearch(paragraph_, n_threads_);
 	}
 	__declspec(dllexport) void Delete_TextSearch_Obj(TextSearch* Obj)
 	{

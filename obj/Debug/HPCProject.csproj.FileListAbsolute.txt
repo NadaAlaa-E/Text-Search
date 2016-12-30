@@ -45,3 +45,12 @@ C:\Users\Ghido\Documents\GitHub\Text-Search\obj\Debug\HPCProject.csprojResolveAs
 C:\Users\Ghido\Documents\GitHub\Text-Search\obj\Debug\HPCProject.Form1.resources
 C:\Users\Ghido\Documents\GitHub\Text-Search\obj\Debug\HPCProject.Properties.Resources.resources
 C:\Users\Ghido\Documents\GitHub\Text-Search\obj\Debug\HPCProject.csproj.GenerateResource.Cache
+C:\Users\Ghido\Documents\GitHub\Text-Search - revert this\bin\Debug\HPCProject.exe.config
+C:\Users\Ghido\Documents\GitHub\Text-Search - revert this\obj\Debug\HPCProject.exe
+C:\Users\Ghido\Documents\GitHub\Text-Search - revert this\obj\Debug\HPCProject.pdb
+C:\Users\Ghido\Documents\GitHub\Text-Search - revert this\obj\Debug\HPCProject.csprojResolveAssemblyReference.cache
+C:\Users\Ghido\Documents\GitHub\Text-Search - revert this\obj\Debug\HPCProject.Form1.resources
+C:\Users\Ghido\Documents\GitHub\Text-Search - revert this\obj\Debug\HPCProject.Properties.Resources.resources
+C:\Users\Ghido\Documents\GitHub\Text-Search - revert this\obj\Debug\HPCProject.csproj.GenerateResource.Cache
+C:\Users\Ghido\Documents\GitHub\Text-Search - revert this\bin\Debug\HPCProject.exe
+C:\Users\Ghido\Documents\GitHub\Text-Search - revert this\bin\Debug\HPCProject.pdb

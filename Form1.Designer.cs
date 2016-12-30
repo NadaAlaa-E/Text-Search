@@ -41,8 +41,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.timeLabel = new System.Windows.Forms.Label();
             this.loadFileButton = new System.Windows.Forms.Button();
+            this.numOfThreadsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numOfThreadsNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // searchQueryTextBox
@@ -93,7 +96,7 @@
             // searchButton
             // 
             this.searchButton.Font = new System.Drawing.Font("Tahoma", 12.5F);
-            this.searchButton.Location = new System.Drawing.Point(25, 174);
+            this.searchButton.Location = new System.Drawing.Point(25, 208);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(209, 40);
             this.searchButton.TabIndex = 7;
@@ -107,9 +110,9 @@
             this.groupBox1.Controls.Add(this.parallelOmpRadioButton);
             this.groupBox1.Controls.Add(this.sequentialRadioButton);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12.5F);
-            this.groupBox1.Location = new System.Drawing.Point(26, 27);
+            this.groupBox1.Location = new System.Drawing.Point(26, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 141);
+            this.groupBox1.Size = new System.Drawing.Size(208, 143);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search Mode";
@@ -195,13 +198,38 @@
             this.loadFileButton.UseVisualStyleBackColor = true;
             this.loadFileButton.Click += new System.EventHandler(this.loadFileButton_Click);
             // 
+            // numOfThreadsNumericUpDown
+            // 
+            this.numOfThreadsNumericUpDown.Font = new System.Drawing.Font("Tahoma", 12.5F);
+            this.numOfThreadsNumericUpDown.Location = new System.Drawing.Point(180, 27);
+            this.numOfThreadsNumericUpDown.Name = "numOfThreadsNumericUpDown";
+            this.numOfThreadsNumericUpDown.Size = new System.Drawing.Size(53, 28);
+            this.numOfThreadsNumericUpDown.TabIndex = 12;
+            this.numOfThreadsNumericUpDown.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12.5F);
+            this.label3.Location = new System.Drawing.Point(22, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 21);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Number of Threads";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(595, 515);
+            this.Controls.Add(this.numOfThreadsNumericUpDown);
             this.Controls.Add(this.loadFileButton);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.searchButton);
@@ -213,6 +241,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numOfThreadsNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,6 +262,8 @@
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.RadioButton parallelGPURadioButton;
         private System.Windows.Forms.Button loadFileButton;
+        private System.Windows.Forms.NumericUpDown numOfThreadsNumericUpDown;
+        private System.Windows.Forms.Label label3;
     }
 }
 

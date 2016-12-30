@@ -16,7 +16,7 @@ namespace HPCProject
     {
         public string paragraph;
         public mode searchMode;
-        
+        public int n_threads;
         int length;
         int[] positions;
         double executionTime;
@@ -35,11 +35,11 @@ namespace HPCProject
             {
                 return;
             }
-            
-            string searchQuery = this.searchQueryTextBox.Text;
-            
 
-            IntPtr textsearch = Wrap.Create_TextSearch_Obj(paragraph);
+            string searchQuery = this.searchQueryTextBox.Text;
+            n_threads = Convert.ToInt32(this.numOfThreadsNumericUpDown.Value);
+
+            IntPtr textsearch = Wrap.Create_TextSearch_Obj(paragraph, n_threads);
             Wrap.Execute_SearchforWord(textsearch, searchQuery, searchMode, out positions, out length);
             executionTime = Wrap.Execute_GetElapsedTime(textsearch);
             Wrap.Delete_TextSearch_Obj(textsearch);
@@ -91,11 +91,10 @@ namespace HPCProject
         {
             searchMode = mode.ParallelGPU;
         }
+
         private void loadFileButton_Click(object sender, EventArgs e)
         {
-
             fileLoader.LoadFiles();
-            
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK)
@@ -112,7 +111,7 @@ namespace HPCProject
     public class Wrap
     {
         [DllImport(@"D:\HPCFiles\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern IntPtr Create_TextSearch_Obj(string keyword);
+        public static extern IntPtr Create_TextSearch_Obj(string keyword, int n_threads);
         [DllImport(@"D:\HPCFiles\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void Delete_TextSearch_Obj(IntPtr Obj);
         [DllImport(@"D:\HPCFiles\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
