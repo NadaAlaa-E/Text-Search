@@ -109,13 +109,13 @@ namespace HPCProject
     public enum mode { ParallelCPU, Serial, ParallelGPU };
     public class Wrap
     {
-        [DllImport(@"C:\Users\nadaa\Desktop\Projects\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern IntPtr Create_TextSearch_Obj(string keyword, int n_threads);
-        [DllImport(@"C:\Users\nadaa\Desktop\Projects\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void Delete_TextSearch_Obj(IntPtr Obj);
-        [DllImport(@"C:\Users\nadaa\Desktop\Projects\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern double Execute_GetElapsedTime(IntPtr Obj);
-        [DllImport(@"C:\Users\nadaa\Desktop\Projects\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void Execute_SearchforWord(IntPtr Obj, string keyword, mode searchMode, [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 4)] out int[] data, out int count);
     }
 }

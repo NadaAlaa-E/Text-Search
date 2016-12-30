@@ -6,3 +6,12 @@ D:\Text-Search-master\obj\x86\Debug\HPCProject.csproj.GenerateResource.Cache
 D:\Text-Search-master\obj\x86\Debug\HPCProject.exe
 D:\Text-Search-master\obj\x86\Debug\HPCProject.pdb
 D:\Text-Search-master\obj\x86\Debug\HPCProject.Form1.resources
+E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\bin\x86\Debug\HPCProject.exe.config
+E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\obj\x86\Debug\HPCProject.exe
+E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\obj\x86\Debug\HPCProject.pdb
+E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\bin\x86\Debug\HPCProject.exe
+E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\bin\x86\Debug\HPCProject.pdb
+E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\obj\x86\Debug\HPCProject.csprojResolveAssemblyReference.cache
+E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\obj\x86\Debug\HPCProject.Form1.resources
+E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\obj\x86\Debug\HPCProject.Properties.Resources.resources
+E:\Work\4th Year - 1st Semestre\High Performance Computing\Project\Text-Search\obj\x86\Debug\HPCProject.csproj.GenerateResource.Cache

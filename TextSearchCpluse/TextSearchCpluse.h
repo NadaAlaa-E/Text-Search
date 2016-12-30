@@ -28,4 +28,4 @@ public:
 
 	TextSearch();
 	~TextSearch();
-};
+};4

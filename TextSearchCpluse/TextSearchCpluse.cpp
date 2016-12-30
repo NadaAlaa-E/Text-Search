@@ -122,9 +122,10 @@ void TextSearch::ParallelSearchGPU(string keyword)
 		if (found) positions_gpu[idx] = 1;
 	});
 
-	for (int i = 0; i <= paragraphSize - keywordSize; i++) {
+	/*for (int i = 0; i <= paragraphSize - keywordSize; i++) {
 		if (positions_gpu(i) == 1) positions.push_back(i);
-	}
+	}*/
+	positions_gpu.synchronize();
 
 	delete[] paragraphInt;
 	delete[] keywordInt;
