@@ -14,14 +14,14 @@ class TextSearch
 private:
 	string paragraph;
 	double timeElapsed;
-	int n_threads;
+	
 	vector <int> positions;
 	void ParallelSearchCPU(string);
 	void SequentialSearch(string);
 	void ParallelSearchGPU(string);
 
 public:
-	TextSearch(string, int);
+	TextSearch(string);
 	vector <int> GetPositions();
 	double GetElapsedTime();
 	void SearchforWord(string, mode);

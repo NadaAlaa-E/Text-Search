@@ -6,3 +6,11 @@ C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.Properties.Re
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.csproj.GenerateResource.Cache
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.exe
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.pdb
+C:\Users\Ghido\Documents\GitHub\Text-Search\bin\Release\HPCProject.exe.config
+C:\Users\Ghido\Documents\GitHub\Text-Search\bin\Release\HPCProject.exe
+C:\Users\Ghido\Documents\GitHub\Text-Search\bin\Release\HPCProject.pdb
+C:\Users\Ghido\Documents\GitHub\Text-Search\obj\Release\HPCProject.Form1.resources
+C:\Users\Ghido\Documents\GitHub\Text-Search\obj\Release\HPCProject.Properties.Resources.resources
+C:\Users\Ghido\Documents\GitHub\Text-Search\obj\Release\HPCProject.csproj.GenerateResource.Cache
+C:\Users\Ghido\Documents\GitHub\Text-Search\obj\Release\HPCProject.exe
+C:\Users\Ghido\Documents\GitHub\Text-Search\obj\Release\HPCProject.pdb

@@ -16,11 +16,11 @@ namespace HPCProject
     {
         public string paragraph;
         public mode searchMode;
-        public int n_threads;
+        
         int length;
         int[] positions;
         double executionTime;
-
+        FileLoader fileLoader = new FileLoader();
         public Form1()
         {
             InitializeComponent();
@@ -37,9 +37,9 @@ namespace HPCProject
             }
             
             string searchQuery = this.searchQueryTextBox.Text;
-            n_threads = Convert.ToInt32(this.numOfThreadsNumericUpDown.Value);
+            
 
-            IntPtr textsearch = Wrap.Create_TextSearch_Obj(paragraph, n_threads);
+            IntPtr textsearch = Wrap.Create_TextSearch_Obj(paragraph);
             Wrap.Execute_SearchforWord(textsearch, searchQuery, searchMode, out positions, out length);
             executionTime = Wrap.Execute_GetElapsedTime(textsearch);
             Wrap.Delete_TextSearch_Obj(textsearch);
@@ -91,9 +91,11 @@ namespace HPCProject
         {
             searchMode = mode.ParallelGPU;
         }
-
         private void loadFileButton_Click(object sender, EventArgs e)
         {
+
+            fileLoader.LoadFiles();
+            
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK)
@@ -109,13 +111,13 @@ namespace HPCProject
     public enum mode { ParallelCPU, Serial, ParallelGPU };
     public class Wrap
     {
-        [DllImport(@"C:\Users\nadaa\Desktop\Projects\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern IntPtr Create_TextSearch_Obj(string keyword, int n_threads);
-        [DllImport(@"C:\Users\nadaa\Desktop\Projects\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"D:\HPCFiles\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern IntPtr Create_TextSearch_Obj(string keyword);
+        [DllImport(@"D:\HPCFiles\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void Delete_TextSearch_Obj(IntPtr Obj);
-        [DllImport(@"C:\Users\nadaa\Desktop\Projects\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"D:\HPCFiles\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern double Execute_GetElapsedTime(IntPtr Obj);
-        [DllImport(@"C:\Users\nadaa\Desktop\Projects\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"D:\HPCFiles\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void Execute_SearchforWord(IntPtr Obj, string keyword, mode searchMode, [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 4)] out int[] data, out int count);
     }
 }
