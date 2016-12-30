@@ -24,33 +24,26 @@ vector <int> TextSearch::GetPositions()
 }
 void TextSearch::SearchforWord(string keyword, mode searchMode)
 {
-	double timeEnd, timeBegin;
-
 	for (int i = 0; i < keyword.size(); i++) keyword[i] = tolower(keyword[i]);
 
 	if (searchMode == ParallelCPU) {
-		timeBegin = omp_get_wtime();
-		ParallelSearchCPU(keyword);
-		timeEnd = omp_get_wtime();
+		timeElapsed = ParallelSearchCPU(keyword);
 	}
 	else if (searchMode == Serial) {
-		timeBegin = omp_get_wtime();
-		SequentialSearch(keyword);
-		timeEnd = omp_get_wtime();
+		timeElapsed = SequentialSearch(keyword);
 	}
 	else{
-		timeBegin = omp_get_wtime();
-		ParallelSearchGPU(keyword);
-		timeEnd = omp_get_wtime();
+		timeElapsed = ParallelSearchGPU(keyword);
 	}
-	timeElapsed = timeEnd - timeBegin;
 }
 
-void TextSearch::ParallelSearchCPU(string keyword)
+double TextSearch::ParallelSearchCPU(string keyword)
 {
 	bool found = true;
 	int paragraphSize = paragraph.size();
 	int keywordSize = keyword.size();
+
+	double timeBegin = omp_get_wtime(), timeEnd;
 
 	omp_set_num_threads(n_threads);
 
@@ -73,11 +66,13 @@ void TextSearch::ParallelSearchCPU(string keyword)
 			}
 		}
 	}
-	positions.push_back(omp_get_num_threads());
+	timeEnd = omp_get_wtime();
+	return timeEnd - timeBegin;
 }
 
-void TextSearch::SequentialSearch(string keyword)
+double TextSearch::SequentialSearch(string keyword)
 {
+	double timeBegin = omp_get_wtime(), timeEnd;
 	for (int i = 0; i + keyword.size() <= paragraph.size(); i++)
 	{
 		bool found = true;
@@ -92,10 +87,14 @@ void TextSearch::SequentialSearch(string keyword)
 		if (found == true)
 			positions.push_back(i);
 	}
+	timeEnd = omp_get_wtime();
+	return timeEnd - timeBegin;
 }
 
-void TextSearch::ParallelSearchGPU(string keyword)
+double TextSearch::ParallelSearchGPU(string keyword)
 {
+	double timeBegin, timeEnd;
+
 	int paragraphSize = paragraph.size();
 	int keywordSize = keyword.size();
 
@@ -106,6 +105,7 @@ void TextSearch::ParallelSearchGPU(string keyword)
 	for (int i = 0; i < paragraphSize; i++) paragraphInt[i] = paragraph[i];
 	for (int i = 0; i < keywordSize; i++) keywordInt[i] = keyword[i];
 
+	timeBegin = omp_get_wtime();
 	array_view<int, 1> a_gpu(paragraphSize - keywordSize + 1, paragraphInt);
 	array_view<int, 1> b_gpu(keywordSize, keywordInt);
 	array_view<int, 1> positions_gpu(paragraphSize - keywordSize + 1, positionsInt);
@@ -121,6 +121,8 @@ void TextSearch::ParallelSearchGPU(string keyword)
 		}
 		if (found) positions_gpu[idx] = 1;
 	});
+	
+	timeEnd = omp_get_wtime();
 
 	for (int i = 0; i <= paragraphSize - keywordSize; i++) {
 		if (positions_gpu(i) == 1) positions.push_back(i);
@@ -129,6 +131,8 @@ void TextSearch::ParallelSearchGPU(string keyword)
 	delete[] paragraphInt;
 	delete[] keywordInt;
 	delete[] positionsInt;
+
+	return timeEnd - timeBegin;
 	/*parallel_for(0, paragraphSize - keywordSize + 1, [&keyword, &paragraph, &pos, keywordSize](int i)
 	{
 		bool found = true;
@@ -153,11 +157,7 @@ double TextSearch::GetElapsedTime()
 
 
 extern "C"
-{/*
-	__declspec(dllexport) TextSearch* Create_TextSearch_Obj()
-	{
-	return new TextSearch();
-	}*/
+{
 	__declspec(dllexport) TextSearch* Create_TextSearch_Obj(const char* paragraph_, const int n_threads_)
 	{
 		return new TextSearch(paragraph_, n_threads_);

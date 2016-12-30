@@ -6,3 +6,4 @@ C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.Properties.Re
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.csproj.GenerateResource.Cache
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.exe
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.pdb
+C:\Users\nadaa\Desktop\Projects\Text Search\obj\Release\HPCProject.csprojResolveAssemblyReference.cache

@@ -16,9 +16,9 @@ private:
 	double timeElapsed;
 	int n_threads;
 	vector <int> positions;
-	void ParallelSearchCPU(string);
-	void SequentialSearch(string);
-	void ParallelSearchGPU(string);
+	double ParallelSearchCPU(string);
+	double SequentialSearch(string);
+	double ParallelSearchGPU(string);
 
 public:
 	TextSearch(string, int);
