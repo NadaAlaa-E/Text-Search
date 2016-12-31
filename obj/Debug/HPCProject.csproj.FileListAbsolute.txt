@@ -1,38 +1,7 @@
-C:\Users\Ghido\Google Drive\Seventh Term\04-Mathematical Programming\Tasks\Towers of Hanoi\HPCProject\bin\Debug\HPCProject.exe.config
-C:\Users\Ghido\Google Drive\Seventh Term\04-Mathematical Programming\Tasks\Towers of Hanoi\HPCProject\bin\Debug\HPCProject.exe
-C:\Users\Ghido\Google Drive\Seventh Term\04-Mathematical Programming\Tasks\Towers of Hanoi\HPCProject\bin\Debug\HPCProject.pdb
-C:\Users\Ghido\Google Drive\Seventh Term\04-Mathematical Programming\Tasks\Towers of Hanoi\HPCProject\obj\Debug\HPCProject.csprojResolveAssemblyReference.cache
-C:\Users\Ghido\Google Drive\Seventh Term\04-Mathematical Programming\Tasks\Towers of Hanoi\HPCProject\obj\Debug\HPCProject.Form1.resources
-C:\Users\Ghido\Google Drive\Seventh Term\04-Mathematical Programming\Tasks\Towers of Hanoi\HPCProject\obj\Debug\HPCProject.Properties.Resources.resources
-C:\Users\Ghido\Google Drive\Seventh Term\04-Mathematical Programming\Tasks\Towers of Hanoi\HPCProject\obj\Debug\HPCProject.csproj.GenerateResource.Cache
-C:\Users\Ghido\Google Drive\Seventh Term\04-Mathematical Programming\Tasks\Towers of Hanoi\HPCProject\obj\Debug\HPCProject.exe
-C:\Users\Ghido\Google Drive\Seventh Term\04-Mathematical Programming\Tasks\Towers of Hanoi\HPCProject\obj\Debug\HPCProject.pdb
-C:\Users\Ghido\Google Drive\Seventh Term\03-High Performanc Computing\Project\HPCProject\bin\Debug\HPCProject.exe.config
-C:\Users\Ghido\Google Drive\Seventh Term\03-High Performanc Computing\Project\HPCProject\obj\Debug\HPCProject.exe
-C:\Users\Ghido\Google Drive\Seventh Term\03-High Performanc Computing\Project\HPCProject\obj\Debug\HPCProject.pdb
-C:\Users\Ghido\Google Drive\Seventh Term\03-High Performanc Computing\Project\HPCProject\obj\Debug\HPCProject.csprojResolveAssemblyReference.cache
-C:\Users\Ghido\Google Drive\Seventh Term\03-High Performanc Computing\Project\HPCProject\obj\Debug\HPCProject.Form1.resources
-C:\Users\Ghido\Google Drive\Seventh Term\03-High Performanc Computing\Project\HPCProject\obj\Debug\HPCProject.Properties.Resources.resources
-C:\Users\Ghido\Google Drive\Seventh Term\03-High Performanc Computing\Project\HPCProject\obj\Debug\HPCProject.csproj.GenerateResource.Cache
-C:\Users\Ghido\Google Drive\Seventh Term\03-High Performanc Computing\Project\HPCProject\bin\Debug\HPCProject.exe
-C:\Users\Ghido\Google Drive\Seventh Term\03-High Performanc Computing\Project\HPCProject\bin\Debug\HPCProject.pdb
-C:\Users\nadaa\Desktop\Projects\TextSearchConsole\GUI\bin\Debug\HPCProject.exe.config
-C:\Users\nadaa\Desktop\Projects\TextSearchConsole\GUI\obj\Debug\HPCProject.exe
-C:\Users\nadaa\Desktop\Projects\TextSearchConsole\GUI\obj\Debug\HPCProject.pdb
 C:\Users\nadaa\Desktop\Projects\Text Search\bin\Debug\HPCProject.exe.config
-C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.exe
-C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.pdb
 C:\Users\nadaa\Desktop\Projects\Text Search\bin\Debug\HPCProject.exe
-C:\Users\nadaa\Desktop\Projects\Text Search\bin\Debug\HPCProject.pdb
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.Form1.resources
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.Properties.Resources.resources
 C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.csproj.GenerateResource.Cache
-D:\Text-Search-master\obj\Debug\HPCProject.csprojResolveAssemblyReference.cache
-D:\Text-Search-master\obj\Debug\HPCProject.Wrap.resources
-D:\Text-Search-master\obj\Debug\HPCProject.Properties.Resources.resources
-D:\Text-Search-master\obj\Debug\HPCProject.csproj.GenerateResource.Cache
-D:\Text-Search-master\bin\Debug\HPCProject.exe.config
-D:\Text-Search-master\bin\Debug\HPCProject.exe
-D:\Text-Search-master\bin\Debug\HPCProject.pdb
-D:\Text-Search-master\obj\Debug\HPCProject.exe
-D:\Text-Search-master\obj\Debug\HPCProject.pdb
+C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.exe
+C:\Users\nadaa\Desktop\Projects\Text Search\obj\Debug\HPCProject.pdb

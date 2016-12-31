@@ -20,10 +20,13 @@ namespace HPCProject
         int length;
         int[] positions;
         double executionTime;
+        FileLoader fileLoader;
 
         public Form1()
         {
             InitializeComponent();
+            fileLoader = new FileLoader();
+            fileLoader.LoadFiles();
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -35,7 +38,7 @@ namespace HPCProject
             {
                 return;
             }
-            
+
             string searchQuery = this.searchQueryTextBox.Text;
             n_threads = Convert.ToInt32(this.numOfThreadsNumericUpDown.Value);
 
@@ -109,13 +112,13 @@ namespace HPCProject
     public enum mode { ParallelCPU, Serial, ParallelGPU };
     public class Wrap
     {
-        [DllImport(@"D:\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"C:\HPCFiles\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern IntPtr Create_TextSearch_Obj(string keyword, int n_threads);
-        [DllImport(@"D:\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"C:\HPCFiles\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void Delete_TextSearch_Obj(IntPtr Obj);
-        [DllImport(@"D:\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"C:\HPCFiles\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern double Execute_GetElapsedTime(IntPtr Obj);
-        [DllImport(@"D:\Text Search\Release\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"C:\HPCFiles\TextSearchCpluse.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void Execute_SearchforWord(IntPtr Obj, string keyword, mode searchMode, [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 4)] out int[] data, out int count);
     }
 }

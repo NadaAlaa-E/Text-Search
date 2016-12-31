@@ -1,4 +1,4 @@
-﻿Build started 27-Dec-16 12:15:34 AM.
+﻿Build started 31-Dec-16 1:47:23 AM.
 Project "C:\Users\nadaa\Desktop\Projects\Text Search\TextSearchCpluse\TextSearchCpluse.vcxproj" on node 2 (Rebuild target(s)).
 ClCompile:
   C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D TEXTSEARCHCPLUSE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Yc"stdafx.h" /Fp"Debug\TextSearchCpluse.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
@@ -9,10 +9,8 @@ ClCompile:
   TextSearchCpluse.cpp
 c:\users\nadaa\desktop\projects\text search\textsearchcpluse\textsearchcpluse.cpp(4): warning C4627: '#include <atlmem.h>': skipped when looking for precompiled header use
           Add directive to 'stdafx.h' or rebuild precompiled header
-c:\users\nadaa\desktop\projects\text search\textsearchcpluse\textsearchcpluse.cpp(29): warning C4018: '<' : signed/unsigned mismatch
-c:\users\nadaa\desktop\projects\text search\textsearchcpluse\textsearchcpluse.cpp(57): warning C4068: unknown pragma
-c:\users\nadaa\desktop\projects\text search\textsearchcpluse\textsearchcpluse.cpp(61): warning C4068: unknown pragma
-c:\users\nadaa\desktop\projects\text search\textsearchcpluse\textsearchcpluse.cpp(86): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nadaa\desktop\projects\text search\textsearchcpluse\textsearchcpluse.cpp(27): warning C4018: '<' : signed/unsigned mismatch
+c:\users\nadaa\desktop\projects\text search\textsearchcpluse\textsearchcpluse.cpp(79): warning C4018: '<' : signed/unsigned mismatch
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\nadaa\Desktop\Projects\Text Search\Debug\TextSearchCpluse.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\nadaa\Desktop\Projects\Text Search\Debug\TextSearchCpluse.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\nadaa\Desktop\Projects\Text Search\Debug\TextSearchCpluse.lib" /MACHINE:X86 /DLL Debug\dllmain.obj
   Debug\stdafx.obj
@@ -23,4 +21,4 @@ Done Building Project "C:\Users\nadaa\Desktop\Projects\Text Search\TextSearchCpl
 
 Build succeeded.
 
-Time Elapsed 00:00:20.63
+Time Elapsed 00:00:21.60

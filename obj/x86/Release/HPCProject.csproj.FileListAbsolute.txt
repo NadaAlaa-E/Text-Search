@@ -1,8 +1,0 @@
-D:\Text-Search-master\bin\x86\Release\HPCProject.exe.config
-D:\Text-Search-master\bin\x86\Release\HPCProject.exe
-D:\Text-Search-master\bin\x86\Release\HPCProject.pdb
-D:\Text-Search-master\obj\x86\Release\HPCProject.Properties.Resources.resources
-D:\Text-Search-master\obj\x86\Release\HPCProject.csproj.GenerateResource.Cache
-D:\Text-Search-master\obj\x86\Release\HPCProject.exe
-D:\Text-Search-master\obj\x86\Release\HPCProject.pdb
-D:\Text-Search-master\obj\x86\Release\HPCProject.Form1.resources
